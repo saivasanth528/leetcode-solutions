@@ -1,4 +1,8 @@
 /*
+ * Java Solution for the leetcode problem First Unique Character
+ */
+
+/*
  * Brute force:
  * Start from left to right. For every character in s check if it occurs only once.
  * Index of the first character that occurs only once in the string is the ans.

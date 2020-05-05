@@ -1,4 +1,8 @@
 /*
+ * Java Solution and explanation for the leetcode problem Container with most water.
+ */
+
+/*
  * Approach 1:
  * For every height h(i), iterate over the array to find the maximum area for that height h(i).
  * The maximum af all is the answer.

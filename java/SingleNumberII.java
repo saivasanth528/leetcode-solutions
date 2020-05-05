@@ -1,4 +1,8 @@
 /*
+ * Java Solution and explanation of leetcode problem Single Number II
+ */
+
+/*
  * Brute force:
  * For every number in the array, count it's occurances in the array. Return the one that has only one occurance.
  * Time Complexity: 
