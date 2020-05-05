@@ -1,6 +1,6 @@
 /*
  * Brute force:
- * Start from left to right. For every character in s chech if it occurs only once.
+ * Start from left to right. For every character in s check if it occurs only once.
  * Index of the first character that occurs only once in the string is the ans.
  * O(N) iteration to check the frequency of every character.
  *
@@ -24,9 +24,6 @@
  *
  * Total TC: O(N)
  * Space Used: O(26)
- *
- * 
- *
  *
  */
 class FirstUniqCharacter {
