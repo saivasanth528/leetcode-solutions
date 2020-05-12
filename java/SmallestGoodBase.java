@@ -5,7 +5,7 @@
  *
  *
  * Basic Observations:
- * Any number N when represented in base the (N-1), will always be 11.
+ * Any number N when represented in the base (N-1), will always be 11.
  *
  * 3 in base 2 -> 11
  * 4 in base 3 -> 11
@@ -48,7 +48,7 @@
  * .
  * check if N-1 is a good base
  *
- * If you observe,we are doing a linear search over the answer.
+ * If you observe, we are doing a linear search over the answer.
  * We also have the ans space with us. Let us see if we can discard a part of the ans space.
  *
  * For a number N, 
@@ -60,7 +60,7 @@
  * else if m is NOT a good base
  *     Can we discard a part of the ans space in this case?
  *     Can we say that if m is not a good base then any number greater than m will also not be good base?
- *     Or Can we say that if m is not a good base then any number less than m will also not be a good base?
+ *     OR Can we say that if m is not a good base then any number less than m will also not be a good base?
  *
  *     NO!
  *     See an exmaple:
@@ -84,7 +84,7 @@
  * will that help us in making a decision to discard a part of the search space?
  *
  * Lets say that we are only finding a good base for d digits (i.e. the number when represented in the good base should have exactly d digits)
- * Which means ther that the number N when represented in the good base will be, 1 1 1 1 1 .....d times
+ * Which means that the number N when represented in the good base will be, 1 1 1 1 1 .....d times
  *
  * Can we now make a decision for d digits?
  *
@@ -100,11 +100,11 @@
  *
  * if num < n
  *    we need to increase the value of m
- *    discard the left part of the ans space
+ *    left half of the ans space can be discarded
  *
  * if num > n
  *    we need to reduce the value of m
- *    discard the right part of the ans space
+ *    again,  right part of the ans space can be discarded
  *    
  * So now, we have a monotous function
  *
@@ -115,6 +115,7 @@
  * Yes :)
  *
  * If we do it for all possible number of digits, the min goodbase becomes the ans.
+ * 
  * What would be the maximum number of digits??
  * Will that be same as the number of digits in the smallest possible base?
  * What is the smallest possible base?
