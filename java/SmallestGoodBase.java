@@ -149,8 +149,7 @@ class Solution {
     
     //Function to find the good base for number N for fixed number of digits
     public long findBase(long N, long digits){
-        long low = 2L, high = N-1L, mid, num;
-       
+        long low = 2L, high = N-1L, mid, num;      
         //standard binary search template
         while(low <= high){   
             mid = low + (high-low)/2;
@@ -169,7 +168,6 @@ class Solution {
     public String smallestGoodBase(String n) {
         long N = Long.parseLong(n);
         long m;
-
         //Looping over all possible 'number of digits'
         //Observe that we are starting from the biggest value. Can you think why?
         for(long i=64; i>0; i--){          
