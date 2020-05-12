@@ -115,12 +115,16 @@
  * Yes :)
  *
  * If we do it for all possible number of digits, the min goodbase becomes the ans.
- * What would be the number of digits?? Think ;)
+ * What would be the maximum number of digits??
+ * Will that be same as the number of digits in the smallest possible base?
+ * What is the smallest possible base?
+ *
  *
  * Time Complexity: 
  * O(log N) -> finding a good base for a fixed number of digits
  * O(Number of digits) -> for doing the above for all possible digit sizes.
- *
+ * 
+ * Total TC: O(D log N) (Where D is the maximum number of digits you can have)
  *
  */
 
