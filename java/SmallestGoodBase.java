@@ -118,7 +118,7 @@
  * What would be the maximum number of digits??
  * Will that be same as the number of digits in the smallest possible base?
  * What is the smallest possible base?
- *
+ * Think ;)
  *
  * Time Complexity: 
  * O(log N) -> finding a good base for a fixed number of digits
