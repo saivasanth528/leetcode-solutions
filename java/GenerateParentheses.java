@@ -16,7 +16,7 @@
  *      a. Either put '(' at index i
  *      b. OR put ')' in at index i
  * 
- * Brute Force:
+ * Solution
  * Generate all sequences of n opening and n closing parentheses.
  * 
  * How to do that?
@@ -80,16 +80,37 @@
  * Or in other words,
  * Only put ')' if the count of '(' remaining is less than the count of ')' remaining.
  *
- *
- * 
- *
- *
- *
- *
- * 
- *
- *
- * 
+ * The above tree in that case changes to,
+ *                                                                   2-Opening, 2-Closing
+ *                                                               /                        \
+ *                                                              /                          \
+ *                                                             put '('                      put ')'
+ *                                                            /                               \
+ *                                                           /                                 \
+ *                                                       1-O,2-C                             NOT Possible
+ *                                                        ['(']                            No need to explore
+ *                                                       /     \                               
+ *                                                      /        \                           
+ *                                                  put '('     put ')'                     
+ *                                                    /             \                    
+ *                                                   /                \                    
+ *                                                0-O,2-C          1-O,1-C                
+ *                                                 ['((']           ['()']                
+ *                                                    |            /     \             
+ *                                                    |           /       \             
+ *                                                put ')'      put '('   put ')'       
+ *                                                    |         /          \           
+ *                                                    |        /            \         
+ *                                                0-O,1-C    0-O,1-C      NOT POSSIBLE    
+ *                                                ["(()"]    ["()("]     No need to explore
+ *                                                   |          |                     
+ *                                                   |          |                     
+ *                                                 put ')'    put ')'      
+ *                                                   |          |                    
+ *                                                   |          |                          
+ *                                                0-O,0-C    0-O,0-C         
+ *                                                ["(())"]   ["()()"]       
+ *                                                Valid        Valid         
  *
  */
 
