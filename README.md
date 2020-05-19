@@ -1,5 +1,5 @@
 # leetCode
-Solutions of leetcode problems
+Detailed explanation and solutions of leetcode problems
 | Problem       | Solution           | Concepts  |
 | ------------- |:-------------:| -----:|
 | [First Bad Version](https://leetcode.com/problems/first-bad-version/)     | [Java](https://github.com/kshitijmishra23/leetCode/blob/master/java/BadVersion.java) | Binary Search |
