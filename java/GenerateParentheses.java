@@ -30,7 +30,7 @@
  * For every selection, we will have 2 choinces for the next index also. And this goes on till the last index (2*n).
  * The following tree summarises this
  *
- * for N=3, initially we have 3-Opening and 3-closing parentheses
+ * for N=2, initially we have 2-Opening and 2-closing parentheses
  *                                      
  *                                                                  2-Opening, 2-Closing
  *                                                               /                        \
@@ -64,7 +64,21 @@
  *                                                Valid        Valid      Invalid   Invalid       Invalid     Invalid
  *
  * 
+ * In this case we are generating all possible sequences and then cheching which one of them are valid sequences.
  *
+ * If we observe, any sequence is invalid, 
+ * if at any index the number of closing parantheses till that index is greater than the opening parentheses till that index.
+ * 
+ * Which means that while creating the sequence,
+ * if putting the closing parentheses makes the count of closing parentheses in the current sequence greater than the count of opening parentheses
+ * then all the results of that sequence will result in invalid sequences.(Verify in the above tree).
+ * 
+ * Can we use this observation to generate only the valid sequence and prune branches resulting in an invalid sequence?
+ *
+ * Yes! The only change that we have to make is,
+ * While making the choice of putting ')' check if the count of '(' in the current sequence is greater than count of ')'.
+ * Or in other words,
+ * Only put ')' if the count of '(' remaining is less than the count of ')' remaining.
  *
  *
  * 
