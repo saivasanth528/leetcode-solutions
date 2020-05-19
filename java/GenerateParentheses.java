@@ -114,27 +114,29 @@
  *
  */
 
-
-
 public class GenerateParentheses {
-    public void generateParenthesisUtil(List<String> ans, int remainingClosed, int remainingOpen, String currSequence){
-        //Termination condition
+    public void generateParenthesesUtil(List<String> ans, int remainingClosed, int remainingOpen, String currSequence){
+        //Termination condition 
+        //If all opening and closing parentheses have been used
         if(remainingClosed == 0 && remainingOpen == 0){
             ans.add(currSequence);
             return;
         }
+        // If the count of remaining opening parentheses is > 0 then we can make a choice to put a '('
         if(remainingOpen > 0){         
-            generateParenthesisUtil(ans, remainingClosed, remainingOpen-1, currSequence+"(");
+            generateParenthesesUtil(ans, remainingClosed, remainingOpen-1, currSequence+"(");
         }
+        // If count of remaining closing parentheses is greater that the count of remaining closing parentheses, this means that
+        // putting a closing parentheses willalways generate a valid sequence
         if(remainingClosed > remainingOpen){           
-            generateParenthesisUtil(ans, remainingClosed-1, remainingOpen, currSequence+")");
+            generateParenthesesUtil(ans, remainingClosed-1, remainingOpen, currSequence+")");
         }
         return;
     }
     
     public List<String> generateParenthesis(int n) {
         List<String> ans = new ArrayList<String>();
-        generateParenthesisUtil(ans, n, n, "");
+        generateParenthesesUtil(ans, n, n, "");
         return ans;
     }
 }
