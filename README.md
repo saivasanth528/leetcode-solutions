@@ -8,5 +8,6 @@ Detailed explanation and solutions of leetcode problems
 |[First Unique Character In a String](https://leetcode.com/problems/first-unique-character-in-a-string/)| [Java](https://github.com/kshitijmishra23/leetCode/blob/master/java/FirstUniqCharacter.java) | Hashing |
 |[Single Number II](https://leetcode.com/problems/single-number-ii/)| [Java](https://github.com/kshitijmishra23/leetCode/blob/master/java/SingleNumberII.java) | Bit Manipulation|
 |[Generate Parentheses](https://leetcode.com/problems/generate-parentheses/)|[Java](https://github.com/kshitijmishra23/leetCode/blob/master/java/GenerateParentheses.java)| Recursion & Backtracking|
+|[Find All Duplicates](https://leetcode.com/problems/find-all-duplicates-in-an-array/) |[Java](https://github.com/kshitijmishra23/leetCode/blob/master/java/FindAllDuplicates.java)|Arrays|
 
 
