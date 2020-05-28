@@ -6,7 +6,7 @@
  * -------------------------------------------------------------------------------------------------------------------------------------------
  *
  *  Brute Force:
- *  For every element nums[i], iterate over elements from 0 to i-1 and check if it has already been seen in the array.
+ *  For every element a[i], iterate over elements from 0 to i-1 and check if it has already been seen in the array.
  *  We will have 2 loops
  *  First loop runs for every index i [0,N)
  *  Second loop runs for every index j [0,i) and checks if the element A[i] is already present.
@@ -32,7 +32,7 @@
  *  - Can we say that if there are no duplicates then there will be a 1-to-1 mapping between the array values and the indices? 
  *    (Assuming 1 based indexing.)
  *  - And, if there are duplicates then there can be 2-to-1 mapping where both the copies of an element will map to a single index.
- *  - Which means that, if for every element nums[i] we mark index nums[i] visited, then for duplicate pairs the same index will be visited twice.
+ *  - Which means that, if for every element a[i] we mark index a[i] visited, then for duplicate pairs the same index will be visited twice.
  *
  *  How can we mark an index visited without using extra space?
  *  Can we modify the array values at an index to indicate that the index has been visited?
@@ -48,9 +48,9 @@
  *
  *  So now we have an easy way to keep track of all the numbers that we visit.
  *  Start iterating over the array.
- *  For every element nums[i], check the sign of the value at index nums[i] (i.e. sign of nums[nums[i]] )
- *  If the sign is -ve that means that the index nums[i] has already been visited so add nums[i] to the ans.
- *  If the sign is +ve that means that the index nums[i] has not been visited. Turn the value at index nums[i] -ve and proceed.*  
+ *  For every element a[i], check the sign of the value at index a[i] (i.e. sign of a[a[i]] )
+ *  If the sign is -ve that means that the index a[i] has already been visited so add a[i] to the ans.
+ *  If the sign is +ve that means that the index a[i] has not been visited. Turn the value at index a[i] -ve and proceed.*  
  *
  */
 
