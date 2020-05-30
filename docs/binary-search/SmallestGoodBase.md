@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Buttons
+title: Smallest Good Base
 parent: Binary Search
 nav_order: 1
 ---
