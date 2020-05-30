@@ -81,6 +81,7 @@ nav_order: 1
  
   For a number N,
   
+ 
   if m is a good base,
   
       Do we need to check for any value greater than m?
@@ -89,10 +90,11 @@ nav_order: 1
       
   else if m is NOT a good base
   
-      Can we discard a part of the ans space in this case?
-      Can we say that if m is not a good base then any number greater than m will also not be good base?
-      OR Can we say that if m is not a good base then any number less than m will also not be a good base?
-      
+Can we discard a part of the ans space in this case?
+Can we say that if m is not a good base then any number greater than m will also not be good base?
+OR Can we say that if m is not a good base then any number less than m will also not be a good base?
+{: .ml-md-4 .ml-xs-42}
+  
  
    NO!
       See an exmaple:
