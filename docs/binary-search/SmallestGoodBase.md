@@ -12,7 +12,7 @@ nav_order: 1
  
 ---
  
-#### Basic Observations:
+##### Basic Observations:
 
   Any number N when represented in the base (N-1), will always be 11.
  
@@ -38,7 +38,7 @@ nav_order: 1
  
   How to find the smallest good base now?
  
-#### Brute force:
+##### Brute force:
 
   Iterate over the ans space and check if the ith element is a good base or not.
   TC: 
@@ -46,7 +46,7 @@ nav_order: 1
   O(Log N) -> Checking if the ith no is a good base.
   Total TC O(NlogN)
   
-#### How to optimize?
+##### How to optimize?
   
   Let us analyse how the brute force is working:
   For any number N  we are iterating from 2 to N-1 till we find the good base.
@@ -100,7 +100,7 @@ nav_order: 1
   if m is a base, and number of digits fixed to d
   then the number would be
  
-  num = 1*m^0 + 1*m^1 + 1*m^2 + ... + 1*m^(d-1)
+  `num = 1*m^0 + 1*m^1 + 1*m^2 + ... + 1*m^(d-1)`
   
   if num == n
      m is a good base
