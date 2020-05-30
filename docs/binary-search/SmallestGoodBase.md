@@ -1,3 +1,9 @@
+---
+layout: default
+title: Buttons
+parent: UI Components
+nav_order: 2
+---
 /*
  * Smallest Good Base
  * For an integer n, we call k>=2 a good base of n, if all digits of n base k are 1.
