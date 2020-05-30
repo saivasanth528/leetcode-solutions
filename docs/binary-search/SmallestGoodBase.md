@@ -29,7 +29,7 @@ nav_order: 1
   
   ```
   
- ##### Why? 
+##### Why? 
  
   `11 => 1*base^0 + 1*base^1`
   
@@ -54,6 +54,7 @@ nav_order: 1
 
   Iterate over the ans space and check if the ith element is a good base or not.
   TC: 
+  
   `O(N) -> Iterating over the array`
   
   `O(Log N) -> Checking if the ith no is a good base.`
@@ -81,18 +82,28 @@ nav_order: 1
   If you observe, we are doing a linear search over the answer.
   We also have the ans space with us. Let us see if we can discard a part of the ans space.
  
-  For a number N, 
+  For a number N,
+  
   if m is a good base,
+  
       Do we need to check for any value greater than m?
+      
       No! We have to find the smallest good base.
+      
       We can discard the right half of the ans space in this case.
+      
+ 
  
   else if m is NOT a good base
+  
       Can we discard a part of the ans space in this case?
+      
       Can we say that if m is not a good base then any number greater than m will also not be good base?
+      
       OR Can we say that if m is not a good base then any number less than m will also not be a good base?
+      
  
-      NO!
+   NO!
       See an exmaple:
       For N=13,
       m=6 is NOT a good base,
