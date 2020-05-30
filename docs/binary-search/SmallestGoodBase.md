@@ -87,7 +87,7 @@ nav_order: 1
 Do we need to check for any value greater than m?
 No! We have to find the smallest good base.
 We can discard the right half of the ans space in this case.
-      {: .ml-md-4 .ml-xs-2}
+{: .ml-md-4 .ml-xs-2}
       
   else if m is NOT a good base
   
@@ -97,13 +97,15 @@ OR Can we say that if m is not a good base then any number less than m will also
 {: .ml-md-4 .ml-xs-2}
   
  
-   NO!
-      See an exmaple:
+   **NO!**
+   See an exmaple:
+   
       For N=13,
       m=6 is NOT a good base,
       but 12 and 3 are good base.
-      So the ans can be found on any side of m.
-      We can not make the decision to discard a part of the search space in this case!
+      
+So the ans can be found on any side of m.
+We can not make the decision to discard a part of the search space in this case!
   
   Why?  What is it that is not allowing us to make any desicion here?
   It is "the number of digits"
