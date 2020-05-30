@@ -69,13 +69,10 @@ nav_order: 1
   For any number N  we are iterating from 2 to N-1 till we find the good base.
   
   check if 2 is a good base 
-  
   check if 3 is a good base
-  
   .
   .
   .
-  
   check if N-1 is a good base
   
  
@@ -87,19 +84,13 @@ nav_order: 1
   if m is a good base,
   
       Do we need to check for any value greater than m?
-      
       No! We have to find the smallest good base.
-      
       We can discard the right half of the ans space in this case.
       
- 
- 
   else if m is NOT a good base
   
       Can we discard a part of the ans space in this case?
-      
       Can we say that if m is not a good base then any number greater than m will also not be good base?
-      
       OR Can we say that if m is not a good base then any number less than m will also not be a good base?
       
  
