@@ -28,12 +28,14 @@ nav_order: 1
   and so on
   
   ```
- 
-  ##### Why? 
   
+ ##### Why? 
+ 
   `11 => 1*base^0 + 1*base^1`
+  
   this should be equal to N
-  ```
+ 
+ ```
   => N = 1*base^0 + 1*base^1
   => base = N-1
  ```
@@ -48,24 +50,33 @@ nav_order: 1
  
   How to find the smallest good base now?
  
-##### Brute force:
+### Brute force:
 
   Iterate over the ans space and check if the ith element is a good base or not.
   TC: 
-  O(N) -> Iterating over the array
-  O(Log N) -> Checking if the ith no is a good base.
-  Total TC O(NlogN)
+  `O(N) -> Iterating over the array`
   
-##### How to optimize?
+  `O(Log N) -> Checking if the ith no is a good base.`
+  
+  `Total TC O(NlogN)`
+  
+  
+### How to optimize?
   
   Let us analyse how the brute force is working:
+  
   For any number N  we are iterating from 2 to N-1 till we find the good base.
+  
   check if 2 is a good base 
+  
   check if 3 is a good base
+  
   .
   .
   .
+  
   check if N-1 is a good base
+  
  
   If you observe, we are doing a linear search over the answer.
   We also have the ans space with us. Let us see if we can discard a part of the ans space.
