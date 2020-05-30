@@ -107,63 +107,97 @@ OR Can we say that if m is not a good base then any number less than m will also
 So the ans can be found on any side of m.
 We can not make the decision to discard a part of the search space in this case!
   
-  Why?  What is it that is not allowing us to make any desicion here?
-  It is "the number of digits"
+  **Why?**
+  What is it that is not allowing us to make any desicion here?
+  
+  It is **"the number of digits"**
+  
   Yes. Different bases can be good bases for a number for different number of digits.
  
+ 
   for 13
-  3 is a good base, 13 in base 3 is "1 1 1"
-  12 is also a good base, 13 in base 12 is "1 1"
+  
+  3 is a good base, 
+  13 in base 3 is "1 1 1"
+  12 is also a good base,
+  13 in base 12 is "1 1"
+  {: .ml-md-4 .ml-xs-2}
+  
   a larger number can be a good base with lesser number of digits
+  
   and a smaller can be a good base with more number of digits
  
   What if we fix the number of digits!
+  
   will that help us in making a decision to discard a part of the search space?
+  
  
- Lets say that we are only finding a good base for d digits (i.e. the number when represented in the good base should have exactly d digits)
-  Which means that the number N when represented in the good base will be, 1 1 1 1 1 .....d times
+ Lets say that we are only finding a good base for d digits
+ (i.e. the number when represented in the good base should have exactly d digits)
  
-  Can we now make a decision for d digits?
+ Which means that the number N when represented in the good base will be,
+ 
+ `1 1 1 1 1 .....d times`
+ 
+ 
+ Can we now make a decision for d digits?
  
   if m is a base, and number of digits fixed to d
+  
   then the number would be
  
   `num = 1*m^0 + 1*m^1 + 1*m^2 + ... + 1*m^(d-1)`
   
   if num == n
-     m is a good base
-     we don't need to check for any value >m
-     right half of the ans space can be discarded
+  
+m is a good base
+we don't need to check for any value >m
+right half of the ans space can be discarded
+ {: .ml-md-4 .ml-xs-2}
  
   if num < n
+  
      we need to increase the value of m
      left half of the ans space can be discarded
+ {: .ml-md-4 .ml-xs-2}
  
   if num > n
+  
      we need to reduce the value of m
      again,  right part of the ans space can be discarded
+     {: .ml-md-4 .ml-xs-2}
      
   So now, we have a monotous function
  
-  isPossible(base B, digits d, number N) -> Returns true if the number N in base B can be represented as 11111...d times
+  `isPossible(base B, digits d, number N) -> Returns true if the number N in base B can be represented as 11111...d times`
+ 
  
   Can we apply binary search to find the ans for a given number of digits now?
  
+ 
   Yes :)
+ 
  
   If we do it for all possible number of digits, the min goodbase becomes the ans.
   
   What would be the maximum number of digits??
-  Will that be same as the number of digits in the smallest possible base?
-  What is the smallest possible base?
-  Think ;)
- 
-  #### Time Complexity: 
-  O(log N) -> finding a good base for a fixed number of digits
-  O(Number of digits) -> for doing the above for all possible digit sizes.
   
-  Total TC: O(D log N) (Where D is the maximum number of digits you can have)
+  Will that be same as the number of digits in the smallest possible base?
+  
+  What is the smallest possible base?
+  
+  Think ;)
+  
  
+### Time Complexity: 
+```
+  O(log N) -> finding a good base for a fixed number of digits
+  
+  O(Number of digits) -> for doing the above for all possible digit sizes.
+ 
+  Total TC: O(D log N) (Where D is the maximum number of digits you can have)
+ ```
+ ---
  
 ```java
 class Solution {   
