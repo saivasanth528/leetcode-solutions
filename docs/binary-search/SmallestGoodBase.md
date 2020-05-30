@@ -13,26 +13,35 @@ nav_order: 1
  
 ---
  
-##### Basic Observations:
+### Basic Observations:
 
   Any number N when represented in the base (N-1), will always be 11.
- 
-  3 in base 2 -> 11
-  4 in base 3 -> 11
-  5 in base 4 -> 11
+ ```
+3 in base 2 -> 11
+  
+4 in base 3 -> 11
+  
+5 in base 4 -> 11
   .
   .
   .
   and so on
+  
+  ```
  
-  Why? 
-  11 => 1*base^0 + 1*base^1
+  ##### Why? 
+  
+  `11 => 1*base^0 + 1*base^1`
   this should be equal to N
+  ```
   => N = 1*base^0 + 1*base^1
   => base = N-1
+ ```
  
   So, the maximum value of the Good Base will be N-1.
+  
   What could be the minimum value? 
+  
   min val = 2 (We have to find the actual minimum value but the lowest possible value that the ans can take is 2)
  
   So we have the ans space ranging from [2, N-1]
