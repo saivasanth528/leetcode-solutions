@@ -5,12 +5,15 @@ parent: Binary Search
 nav_order: 1
 ---
 
- ## Smallest Good Base
-  For an integer n, we call k>=2 a good base of n, if all digits of n base k are 1.
-  Now given a string representing n, you should return the smallest good base of n in string format.
+## Smallest Good Base
+
+ For an integer n, we call k>=2 a good base of n, if all digits of n base k are 1.
+ Now given a string representing n, you should return the smallest good base of n in string format.
  
+---
  
-  #### Basic Observations:
+#### Basic Observations:
+
   Any number N when represented in the base (N-1), will always be 11.
  
   3 in base 2 -> 11
@@ -35,16 +38,16 @@ nav_order: 1
  
   How to find the smallest good base now?
  
-  #### Brute force:
- 
+#### Brute force:
+
   Iterate over the ans space and check if the ith element is a good base or not.
   TC: 
   O(N) -> Iterating over the array
   O(Log N) -> Checking if the ith no is a good base.
   Total TC O(NlogN)
- 
-  #### How to optimize?
- 
+  
+#### How to optimize?
+  
   Let us analyse how the brute force is working:
   For any number N  we are iterating from 2 to N-1 till we find the good base.
   check if 2 is a good base 
