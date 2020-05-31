@@ -118,8 +118,11 @@ We can not make the decision to discard a part of the search space in this case!
   for 13
   
   3 is a good base, 
+  
   13 in base 3 is "1 1 1"
+  
   12 is also a good base,
+  
   13 in base 12 is "1 1"
   {: .ml-md-4 .ml-xs-2}
   
