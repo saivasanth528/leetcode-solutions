@@ -126,12 +126,11 @@ We can not make the decision to discard a part of the search space in this case!
 {: .ml-md-4 .ml-xs-2}
   
   a larger number can be a good base with lesser number of digits
-  
   and a smaller can be a good base with more number of digits
  
   What if we fix the number of digits!
   
-  will that help us in making a decision to discard a part of the search space?
+  Will that help us in making a decision to discard a part of the search space?
   
  
  Lets say that we are only finding a good base for d digits
